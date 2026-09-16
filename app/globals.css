@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  ::selection {
+    background-color: #9ec8cb;
+    color: #2c5558;
+  }
+}
+
+@layer utilities {
+  .font-space-mono {
+    font-family: 'Space Mono', monospace;
+  }
+  .retro-shadow {
+    box-shadow: 2px 2px 0px #1a1c1c;
+  }
+  .retro-shadow-sm {
+    box-shadow: 1px 1px 0px #1a1c1c;
+  }
+  .retro-shadow-lg {
+    box-shadow: 4px 4px 0px #1a1c1c;
+  }
+  .retro-shadow-header {
+    box-shadow: 0 2px 0px #1a1c1c;
+  }
+  .retro-border {
+    border: 2px solid #1a1c1c;
+  }
+}
+
+/* Scanline effect overlay */
+.scanline::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.015) 2px,
+    rgba(0, 0, 0, 0.015) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Pixel cursor blink */
+@keyframes pixel-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.pixel-blink {
+  animation: pixel-blink 1s step-end infinite;
+}
+
+/* Boot sequence animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in-up {
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+/* Retro hover lift */
+.hover-lift {
+  transition: transform 0.1s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Active press effect */
+.active-press:active {
+  transform: translate(1px, 1px);
+  box-shadow: none !important;
+}
