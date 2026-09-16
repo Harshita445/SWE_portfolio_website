@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 const navLinks = [
   { label: 'TEAM_ROSTER', href: '/', path: 'team-roster' },
   { label: 'ABOUT_PROJECT', href: '/project', path: 'about-project' },
-  { label: 'PRESENTATION', href: '/project#deck', path: 'presentation' },
+  { label: 'PRESENTATION', href: '/presentation', path: 'presentation' },
 ]
 
 export default function Header() {
