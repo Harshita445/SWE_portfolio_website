@@ -192,7 +192,7 @@ export default function HomePage() {
                     <span>VIEW PROJECT DETAILS</span>
                     <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>arrow_forward</span>
                   </Link>
-                  <Link href="/project#deck"
+                  <Link href="/presentation"
                     className="px-space-md py-space-sm bg-surface-container-lowest text-on-surface border-2 border-on-surface uppercase tracking-wider flex items-center justify-center gap-space-xs shadow-[2px_2px_0px_#1a1c1c] hover:bg-surface-container-high active-press transition-colors"
                     style={{ ...monoStyle, fontSize: '12px', lineHeight: '16px', letterSpacing: '0.05em', fontWeight: '700' }}>
                     <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>picture_as_pdf</span>

@@ -207,20 +207,20 @@ export default function ProjectPage() {
                     </div>
 
                     <div className="flex flex-col gap-space-xs">
-                      <button
+                      <Link
+                        href="/presentation"
                         className="w-full py-space-sm px-space-md bg-primary text-on-primary font-bold uppercase tracking-wide shadow-md hover:bg-tertiary active-press flex items-center justify-center gap-space-xs"
-                        style={{ ...monoStyle, fontSize: '15px', lineHeight: '22px', letterSpacing: '0.04em' }}
-                        type="button">
-                        <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>download</span>
-                        <span>Open Deck (.PDF)</span>
-                      </button>
-                      <button
+                        style={{ ...monoStyle, fontSize: '15px', lineHeight: '22px', letterSpacing: '0.04em' }}>
+                        <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>slideshow</span>
+                        <span>Open Deck (14 Slides)</span>
+                      </Link>
+                      <Link
+                        href="/presentation"
                         className="w-full py-space-xs px-space-md bg-surface-container-high text-on-surface uppercase tracking-wide shadow-sm hover:bg-surface-variant active-press flex items-center justify-center gap-space-xs"
-                        style={{ ...monoStyle, fontSize: '12px', lineHeight: '16px', letterSpacing: '0.05em', fontWeight: '700' }}
-                        type="button">
-                        <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>upload_file</span>
-                        <span>Replace Slide Deck</span>
-                      </button>
+                        style={{ ...monoStyle, fontSize: '12px', lineHeight: '16px', letterSpacing: '0.05em', fontWeight: '700' }}>
+                        <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>co_present</span>
+                        <span>Presentation Mode</span>
+                      </Link>
                     </div>
                   </div>
 
